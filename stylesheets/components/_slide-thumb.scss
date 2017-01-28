@@ -1,0 +1,20 @@
+.c-slide-thumb{
+  // TODO: Extract this
+  background-color: lighten($dark, 5);
+  @extend .o-color--white;
+}
+.c-slide-thumb__header{}
+.c-slide-thumb__content{}
+
+.c-slide-thumb__footer{
+  @extend .o-text-align--right;
+}
+.c-slide-thumb__footer__icon{
+  @extend .o-padding--xs;
+  @extend .o-margin--zero;
+}
+
+.c-slide-thumb__icon{
+  // TODO: Extract this
+  font-size: 1.6em;
+}

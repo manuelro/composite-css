@@ -1,0 +1,92 @@
+.o-key-value-list{
+  @extend .o-margin--zero;
+  @extend .o-padding-left--zero;
+
+  @extend .o-list-style--none;
+}
+
+.o-key-value-list--to-left{
+  @extend .o-overflow--hidden;
+
+  > .o-key-value-list__item {
+    @extend .o-float--left;
+    // TODO: Extract this
+    margin-right: 1em
+  }
+}
+
+.o-key-value-list__item{
+  @extend .o-padding-top--md;
+  @extend .o-padding-bottom--md;
+  > .o-key {
+    @extend .o-font-weight--bold;
+  }
+}
+
+.o-key-value-list__item--inlined{
+  @extend .o-display--table;
+  @extend .o-width--full;
+  @extend .o-margin-top--sm;
+  @extend .o-margin-bottom--sm;
+  > .o-key, > .o-value{
+    @extend .o-display--table-cell;
+    @extend .o-vertical-align--middle;
+  }
+  > .o-key{
+    @extend .o-font-weight--normal;
+  }
+  > .o-value{
+    @extend .o-float--right;
+  }
+}
+
+.o-key-value-list__item--stacked{
+  // TODO: Extract this
+  padding-top: 0.3em;
+  padding-bottom: 0.5em;
+
+  > .o-key, > .o-value{
+    @extend .o-display--block;
+  }
+
+  > .o-key{
+    // TODO: Extract this
+    font-size: 70%;
+
+    @extend .o-font-weight--normal;
+  }
+
+  > .o-value {
+    // TODO: Extract this
+    padding-top: 0.3em;
+    @extend .o-padding-left--zero;
+    // TODO: Extract this
+    font-size: 80%;
+  }
+}
+
+.o-key-value-list__item--inverted{
+  > .o-key {
+    // TODO: Extract this
+    font-size: 80%;
+  }
+
+  > .o-value{
+    // TODO: Extract this
+    padding-top: 0.3em;
+    // TODO: Extract this
+    font-size: 70%;
+    @extend .o-font-weight--normal;
+  }
+}
+
+.o-key{
+  @extend .o-text-transform--uppercase;
+  // TODO: Extract this
+  color: lighten(black, 65);
+}
+
+.o-value{
+  padding-left: 1em;
+  @extend .o-float--right;
+}

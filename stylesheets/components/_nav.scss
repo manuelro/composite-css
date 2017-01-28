@@ -1,0 +1,66 @@
+.c-nav-logo{
+  color: linear-gradient(45deg, $green, mix($yellow, $green));
+  font-size: 3em;
+}
+
+.c-nav{
+  @extend .o-display--block;
+}
+
+.c-nav-list{
+  @extend .o-padding-right--zero;
+  @extend .o-padding-left--zero;
+  @extend .o-list-style--none;
+}
+.c-nav-list--root{}
+.c-nav-list--nested{
+  @extend .o-position--absolute;
+  @extend .o-padding-top--sm;
+  @extend .o-width--auto;
+  @extend .o-display--none;
+}
+
+.c-nav-list--nested__inner{
+  // TODO: Extract this
+  @extend .o-background-image--gradient-green-yellow-green;
+  @extend .o-display--block;
+  @extend .o-position--relative;
+  @extend .o-overflow--hidden;
+  @extend .o-border-radius--xs;
+}
+
+.c-nav-list__item{
+  @extend .o-float--left;
+}
+.c-nav-list__item--root:hover{
+  .c-nav-link--root{
+    @extend .o-border-color--green;
+  }
+  .c-nav-list--nested{
+    @extend .o-display--block;
+  }
+}
+.c-nav-list__item--nested{}
+
+.c-nav-link{
+  @extend .o-text-transform--uppercase;
+  @extend .c-button;
+
+  @extend .o-padding-left--sm;
+  @extend .o-padding-right--sm;
+
+  @extend .o-border-width--sm;
+  @extend .o-border-style--solid;
+  @extend .o-border-color--transparent;
+
+  line-height: 30px;
+  border-radius: 15px;
+}
+.c-nav-link--root.c-nav-link--is-active{
+  @extend .o-border-color--green;
+}
+.c-nav-link--root{
+  @extend .o-margin-left--sm;
+  @extend .o-margin-right--sm;
+}
+.c-nav-link--nested{}

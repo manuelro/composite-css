@@ -1,0 +1,14 @@
+.c-placeholder-add-content{}
+.c-placeholder-add-content__header{
+  @extend .o-width--full;
+}
+.c-placeholder-add-content__header__filter{
+  // TODO: Extract this
+  font-size: 1.7em;
+}
+.c-placeholder-add-content__list{}
+.c-placeholder-add-content__list__item{
+  @extend .o-width--6-12;
+  @extend .o-float--left;
+  @extend .o-list-style--none;
+}

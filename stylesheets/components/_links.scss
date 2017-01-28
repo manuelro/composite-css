@@ -1,0 +1,29 @@
+a:link{
+  // TODO: Extract this
+  color: $dark;
+  @extend .o-text-decoration--none;
+
+  // border-bottom-style: dashed;
+  // border-bottom-color: transparentize($dark, 0.5);
+  // border-bottom-width: 1px;
+}
+a:hover{
+  // border-bottom-color: $blue;
+}
+
+// TODO: RE-think this
+.o-link--link-red--negative:link{ color: lighten($red, 15); }
+.o-link--hover--red--negative:hover{ color: lighten($red, 10); }
+
+.o-link--link--green--negative:link{ color: lighten($green, 15); }
+.o-link--hover--green--negative:hover{ color: lighten($green, 10); }
+.o-link--active--green--negative:active{ color: $green }
+
+.o-link--red--negative-link:link{ color: lighten($red, 15); }
+.o-link--red--negative-hover:hover { color: lighten($red, 20); }
+
+.o-link--green:link{ color: $green; }
+.o-link--green--negative:link{}
+
+.o-link--blue:link{ color: $blue; }
+.o-link--blue--negative:link{}

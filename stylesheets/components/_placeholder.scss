@@ -1,0 +1,141 @@
+$placeholder-z-index: 200;
+
+.c-placeholder{
+  @extend .o-background-color--white;
+  @extend .o-position--absolute;
+
+  // TODO: Extract this
+  z-index: $placeholder-z-index;
+
+  @extend .o-box-sizing--border-box;
+  @extend .o-border-style--solid;
+  @extend .o-border-width--lg;
+
+  // TODO: Extract this
+  border-color: lighten(black, 95);
+  @extend .o-overflow-y--hidden;
+}
+
+.c-placeholder__inner{
+  @extend .o-padding--sm;
+}
+
+.c-placeholder__head{
+  @extend .o-width--full;
+}
+
+$c_placeholder_content_item_vanishing_start-opacity: 1;
+$c_placeholder_content_item_vanishing_start: 1;
+$c_placeholder_content_item_vanishing_end: 10;
+
+@for $i from 1 through 10{
+  .c-placeholder__content-item:nth-child(#{$i}){
+    opacity: $c_placeholder_content_item_vanishing_start-opacity;
+    $c_placeholder_content_item_vanishing_start-opacity: $c_placeholder_content_item_vanishing_start-opacity - .10;
+  }
+}
+
+.c-placeholder__name{
+  // TODO:  Extract this
+  font-size: 1.2em;
+}
+
+.c-placeholder__content-item{
+  @extend .o-margin-top--sm;
+  @extend .o-opacity--zero;
+}
+.c-placeholder__content-item__name{
+  // TODO:  Extract this
+  font-size: 0.7em;
+}
+
+$c-placeholder__overlay-content-z-index: $placeholder-z-index + 1;
+.c-placeholder__overlay-content{
+  @extend .o-position--absolute;
+  // TODO:  Extract this
+  z-index: $c-placeholder__overlay-content-z-index;
+  // TODO:  Extract this
+  background-color: transparentize($dark, 0.2);
+}
+
+$c-placeholder__overlay-content-z-index: $placeholder-z-index + 1;
+$c-placeholder__overlay-content__inner-padding: 2em;
+.c-placeholder__overlay-content__inner{
+  // TODO: Extract this
+  z-index: $c-placeholder__overlay-content-z-index;
+  @extend .o-position--relative;
+  @extend .o-background-color--white;
+
+  // TODO: Extract this
+  top: $c-placeholder__overlay-content__inner-padding;
+  right: $c-placeholder__overlay-content__inner-padding;
+  bottom: $c-placeholder__overlay-content__inner-padding;
+  left: $c-placeholder__overlay-content__inner-padding;
+
+  @extend .o-max-width--full;
+  @extend .o-margin--auto;
+}
+
+@media (max-width: 1240px){
+  .c-placeholder--size-4.c-placeholder--colspan-1{
+    .c-placeholder__name{
+      // TODO: Extract this
+      font-size: 1em;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  // TODO: Figure out how to extend within @media
+  .c-placeholder--size-4.c-placeholder--colspan-1{
+    .c-placeholder__inner{
+      padding: 0;
+      height: 100%;
+    }
+
+    .c-placeholder__head{
+      height: 100%;
+    }
+
+    .c-placeholder__name{
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .c-placeholder__contents{
+      display: none;
+    }
+
+    .c-placeholder__actions{
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+
+  .c-placeholder--size-3.c-placeholder--colspan-1{
+    .c-placeholder__name{
+      font-size: 1em;
+    }
+  }
+
+  .c-placeholder--size-4.c-placeholder--colspan-1{
+    .c-placeholder__name{
+      font-size: 0.8em;
+      bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .c-placeholder--size-3.c-placeholder--colspan-1{
+    .c-placeholder__name{
+      font-size: 0.8em;
+      font-weight: bold;
+    }
+  }
+}

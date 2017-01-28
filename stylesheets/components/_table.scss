@@ -1,0 +1,18 @@
+.c-table{
+  @extend .o-width--full;
+}
+
+.c-table__head{
+  @extend .o-text-transform--uppercase;
+
+  // TODO: Extract this
+  font-size: 0.8em;
+}
+.c-table__head__cell{}
+
+.c-table__body{
+  // TODO: Extract this
+  font-size: 0.8em;
+}
+.c-table__body__row{}
+.c-table__body__row__cell{}

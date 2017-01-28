@@ -1,0 +1,99 @@
+$removable-items-transparency: 0.7;
+
+.c-removable-item-list{
+  @extend .o-margin--zero;
+  @extend .o-padding--zero;
+  @extend .o-float--left;
+}
+
+$c-removable-item-border-color: darken($dark, 2);
+$c-removable-item-text-color: transparentize(lighten($dark, 70), 0.2);
+.c-removable-item{
+  // TODO: Extract this
+  border-radius: 7px;
+  @extend .o-border-style--solid;
+  @extend .o-border-width--sm;
+
+  // TODO: Extract this
+  border-color: $c-removable-item-border-color;
+  @extend .o-box-sizing--border-box;
+
+  @extend .o-float--left;
+  // TODO: Extract this
+  height: 40px;
+
+  @extend .o-margin-right--xs;
+  @extend .o-margin-bottom--xs;
+  // TODO: Extract this
+  color: $c-removable-item-text-color;
+
+  @extend .o-padding-right--xs;
+  @extend .o-padding-left--xs;
+}
+.c-removable-item__div{}
+.c-removable-item__index{
+  @extend .o-vertical-align--bottom;
+  // TODO:  Extract this
+  font-size: 0.9em;
+
+  @extend .o-padding--xs;
+  @extend .o-min-width--1-2;
+}
+.c-removable-item__actions{
+  // TODO: Extract this
+  font-size: 0.7em;
+}
+.c-removable-item__action{}
+
+$c-removable-item__action-text-color: transparentize($c-removable-item-text-color, 0.6);
+.c-removable-item__action:link{
+  color: $c-removable-item__action-text-color;
+  @extend .o-text-decoration--none;
+}
+.c-removable-item__action:hover{
+  @extend .o-color--white;
+}
+
+$c-removable-item--is-active-bg-color: lighten($dark, 2.5);
+.c-removable-item--is-active{
+  // TODO: Extract this
+  background-color: $c-removable-item--is-active-bg-color;
+  @extend .o-border-color--transparent;
+
+  > .c-removable-item__index{
+    @extend .o-color--white;
+  }
+
+  .c-removable-item__action--delete{
+    // TODO: Extract this
+    color: lighten($red, 15);
+
+    &:hover{
+      // TODO: Extract this
+      color: lighten($red, 20);
+    }
+  }
+}
+
+.c-removable-item__action--add{
+  &:hover{
+    // TODO: Extract this
+    color: lighten($green, 15);
+  }
+}
+
+.c-removable-item-list__controls{
+  @extend .o-padding--zero;
+  @extend .o-margin--zero;
+  @extend .o-float--right;
+}
+
+.c-removable-item-list__control{
+  // TODO: Extract this
+  height: 40px;
+}
+
+.c-removable-item__action--add{
+  // TODO: Extract this
+  font-size: 1.8em;
+}

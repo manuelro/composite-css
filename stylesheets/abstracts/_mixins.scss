@@ -1,0 +1,9 @@
+@mixin object-key-value($prefix, $suffix, $value: null){
+  .o-#{$prefix}--#{$suffix}{
+    @if $value{
+      #{$prefix}: #{$value};
+    } @else {
+      #{$prefix}: #{$suffix};
+    }
+  }
+}

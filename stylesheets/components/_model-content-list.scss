@@ -1,0 +1,12 @@
+.c-model-content-list{
+  @extend .o-padding--zero;
+}
+.c-model-content-list__item{
+  @extend .o-width--full;
+  @extend .o-float--left;
+}
+
+.c-model-content-list__item__image{
+  // TODO: Extract this
+  width: 140px;
+}

@@ -1,0 +1,63 @@
+.o-ratio-keeper{
+  @extend .o-position--relative;
+  @extend .o-width--full;
+  // TODO: Extract this
+  padding-bottom: 62%;
+}
+.o-ratio-keeper--rect{
+  // TODO: Extract this
+  padding-bottom: 50%;
+}
+.o-ratio-keeper--semi-square{
+  // TODO: Extract this
+  padding-bottom: 80%;
+}
+.o-ratio-keeper--square{
+  // TODO: Extract this
+  padding-bottom: 100%;
+}
+.o-ratio-keeper__content{
+  @extend .o-position--absolute;
+  @extend .o-width--full;
+  @extend .o-height--full;
+}
+
+.o-ratio-keeper--responsive{
+  padding-bottom: 45%;
+}
+
+@media screen and (max-aspect-ratio: 16/10){
+  .o-ratio-keeper--responsive{
+    padding-bottom: 45%;
+  }
+}
+
+@media screen and (max-aspect-ratio: 14/10){
+  .o-ratio-keeper--responsive{
+    padding-bottom: 52%;
+  }
+}
+
+@media screen and (max-aspect-ratio: 14/12){
+  .o-ratio-keeper--responsive{
+    padding-bottom: 60%;
+  }
+}
+
+@media screen and (max-aspect-ratio: 12/12){
+  .o-ratio-keeper--responsive{
+    padding-bottom: 65%;
+  }
+}
+
+@media screen and (max-aspect-ratio: 9/10){
+  .o-ratio-keeper--responsive{
+    padding-bottom: 70%;
+  }
+}
+
+@media screen and (max-aspect-ratio: 7/10){
+  .o-ratio-keeper--responsive{
+    padding-bottom: 75%;
+  }
+}

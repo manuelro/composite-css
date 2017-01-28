@@ -1,0 +1,39 @@
+.c-divisor{}
+
+.c-divisor--horizontal{
+  @extend .o-display--block;
+  @extend .o-text-align--center;
+  @extend .o-padding--sm;
+}
+
+.c-divisor--horizontal::after{
+  @extend .o-content--empty;
+  @extend .o-display--inline-block;
+}
+
+.c-divisor--horizontal--xs::after{
+  height: 1px;
+  width: 20px;
+}
+
+.c-divisor--horizontal--sm::after{
+  height: 2px;
+  width: 40px;
+}
+
+.c-divisor--horizontal--full--xs::after{
+  height: 1px;
+  @extend .o-width--full;
+}
+
+.c-divisor--blue::after{
+  @extend .o-background-color--blue;
+}
+
+.c-divisor--green::after{
+  @extend .o-background-color--green;
+}
+
+.c-divisor--light::after{
+  @extend .o-background-color--light;
+}

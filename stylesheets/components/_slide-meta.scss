@@ -1,0 +1,26 @@
+.c-slide__meta{
+  // position: absolute;
+  // bottom: 15px;
+  // left: 0;
+  // right: 0;
+}
+.c-slide__meta__header{}
+.c-slide__meta__footer{
+  // TODO:  Extract this
+  background-color: transparentize($dark, 0.2);
+}
+.c-slide__meta__footer__list{}
+.c-slide__meta__footer__list__item{
+  @extend .o-padding--sm;
+}
+.c-slide__meta__footer__key{
+  // TODO: Extract this
+  font-size: 0.7em;
+  // TODO: Extract this
+  padding-bottom: 0.3em;
+  // TODO: Extract this
+  color: transparentize(white, 0.5);
+}
+.c-slide__meta__footer__value{
+  @extend .o-color--white;
+}

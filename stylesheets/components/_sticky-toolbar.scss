@@ -1,0 +1,13 @@
+.c-sticky-toolbar{
+  @extend .o-position--fixed;
+  z-index: 1000;
+}
+
+.c-sticky-toolbar--bottom{
+  @extend .o-bottom--zero;
+}
+
+.c-sticky-toolbar--bottom-left{
+  @extend .o-bottom--zero;
+  @extend .o-left--zero;
+}

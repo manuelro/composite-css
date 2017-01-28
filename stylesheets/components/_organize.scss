@@ -1,0 +1,49 @@
+.list{}
+.list-item{
+  @extend .o-margin--sm;
+
+  // TODO: Extract this
+  border: solid 2px lighten(black, 95);
+
+  @extend .o-border-radius--xs;
+
+
+  @extend .o-width--3-12;
+  @extend .o-float--left;
+  @extend .o-list-style--none;
+}
+
+.list-item-inner{
+  @extend .o-padding--sm;
+}
+
+.list-item__header{
+  // TODO: Extract this
+  height: 40px;
+}
+
+.list-item__header__uuid{
+  // TODO: Extract this
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  // TODO: Extract this
+  font-size: 80%;
+
+
+  > .o-value{
+    // TODO: Extract this
+    color: lighten(black, 65);
+  }
+}
+
+.list-item__main{
+  @extend .o-padding-top--md;
+  @extend .o-padding-bottom--md;
+  @extend .o-text-align--center;
+  @extend .o-margin-bottom--sm;
+}
+
+.list-item__footer{
+  // TODO: Extract this
+  background-color: lighten(black, 95);
+  @extend .o-padding--sm;
+}

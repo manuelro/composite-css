@@ -1,0 +1,61 @@
+$c-modal-z-index: 400;
+.c-modal{
+  @extend .o-position--absolute;
+  // TODO: Extract this
+  background-color: transparentize($dark, 0.2);
+  // TODO: Extract this
+  z-index: $c-modal-z-index;
+}
+
+$c-modal__content-padding: 20px;
+$c-modal-z-index: $c-modal-z-index + 1;
+.c-modal__content{
+  @extend .o-position--absolute;
+  @extend .o-background-color--white;
+  @extend .o-display--block;
+  @extend .o-margin--auto;
+
+  // TODO: Extract this
+  max-width: 600px;
+  max-height: 600px;
+
+  overflow-y: auto;
+
+  top: $c-modal__content-padding;
+  right: $c-modal__content-padding;
+  bottom: $c-modal__content-padding;
+  left: $c-modal__content-padding;
+
+  border-radius: 5px;
+
+  padding: $c-modal__content-padding / 2;
+}
+
+.c-modal__content__header{
+  @extend .o-width--full;
+  margin-bottom: 1em;
+}
+
+.c-modal__content__header__action{}
+.c-modal__content__header__action__link, .c-modal__content__header__action__link:link{
+  @extend .o-text-transform--uppercase;
+  // TODO: Extract this
+  font-size: 0.75em;
+
+  @extend .o-border-style--solid;
+  @extend .o-border-width--xs;
+  // TODO: Extract this
+  border-color: lighten(black, 90);
+
+  // TODO: Extract this
+  padding: 0.3em 0.7em;
+
+  @extend .o-border-radius--xs;
+  @extend .o-margin-left--xs;
+}
+.c-modal__content__header__action__link:hover{
+  // TODO: Extract this
+  border-color: lighten(black, 75);
+}
+.c-modal__content__header__action__icon{
+}

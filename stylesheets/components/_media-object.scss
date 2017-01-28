@@ -1,0 +1,43 @@
+.o-media {}
+.o-media--stack {}
+.o-media--stack > .o-media__image,
+.o-media--stack > .o-media__body{
+  @extend .o-display--block;
+  @extend .o-width--full;
+}
+
+.o-media__image {
+  @extend .o-float--left;
+  @extend .o-margin-right--sm;
+}
+
+.o-media, .o-media__body {
+  @extend .o-overflow--hidden;
+  _overflow: visible;
+  zoom:1;
+}
+
+.o-media--reversed{
+  @extend .o-overflow--hidden;
+  _overflow: visible;
+  zoom:1;
+
+  .o-media--reversed__image{
+    @extend .o-float--right;
+  }
+
+  .o-media--reversed__body{
+    @extend .o-overflow--hidden;
+    _overflow: visible;
+    zoom:1;
+  }
+}
+
+.o-media--overflowed{
+  @extend .o-clear--both;
+}
+
+.o-media--overflowed,
+.o-media--overflowed > .o-media__body{
+  @extend .o-overflow--visible;
+}

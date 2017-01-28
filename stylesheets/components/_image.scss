@@ -1,0 +1,81 @@
+.c-image-completed{
+  background-color: $dark;
+}
+
+.c-image-file{
+  // position: absolute;
+  // top: 0; right: 0; bottom: 0; left: 0;
+  @extend .o-width--full;
+
+  // TODO: Extract this
+  padding-bottom: 62%;
+  opacity: 0.4;
+}
+
+.c-image-file::before{
+  // content: 'Before';
+  // position: absolute;
+  // top: 0; right: 0; bottom: 0; left: 0;
+  // background-color: $dark;
+  // opacity: 0.4;
+}
+
+
+.c-upload-image{}
+.c-upload-image__icon{
+  // TODO: Extract this
+  font-size: 12em;
+}
+.c-upload-image__label{
+  @extend .o-display--inline-block;
+}
+.c-upload-image__button{
+  // TODO: Extract this
+  padding: 0.5em 0;
+  // TODO: Extract this
+  border: solid black 2px;
+
+  @extend .o-border-radius--xs;
+  @extend .o-display--inline-block;
+  @extend .o-overflow--hidden;
+}
+.c-upload-image__button__text{
+  // TODO: Extract this
+  padding: 0 1.5em;
+  @extend .o-text-align--center;
+  @extend .o-display--inline-block;
+}
+.c-upload-image__input{
+  @extend .o-display--none;
+}
+.c-upload-image__progress{
+  // TODO: Extract this
+  width: 70%;
+  height: 5px;
+  @extend .o-border-width--zero;
+  @extend .o-background-color--white;
+}
+
+.c-progress-bar{
+  @extend .o-display--block;
+  // TODO: Extract this
+  height: 4px;
+  // TODO: Extract this
+  background-color: gray;
+
+  @extend .o-position--relative;
+  // TODO: Extract this
+  margin: 5px 10px 0 10px;
+  // TODO: Extract this
+  border-radius: 2px;
+  @extend .o-overflow--hidden;
+}
+
+.c-progress-bar__progress{
+  @extend .o-background-color--white;
+  @extend .o-height--full;
+  @extend .o-position--relative;
+  @extend .o-display--block;
+  // TODO: Extract this
+  border-radius: 2px;
+}

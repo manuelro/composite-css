@@ -1,0 +1,51 @@
+.c-input--checkbox{}
+
+.c-input--checkbox--decorated--checkmark{
+  // TODO: Extract this
+  width: 24px;
+}
+.c-input--checkbox--decorated--checkmark__icon{
+  // TODO: Extract this
+  width: 24px;
+  height: 24px;
+  // TODO: Extract this
+  background-color: darken(white, 10);
+  // TODO: Extract this
+  color: darken(white, 50);
+
+  @extend .o-text-align--center;
+
+  // TODO: Extract this
+  border-radius: 12px;
+  // TODO: Extract this
+  font-size: 0.8em;
+}
+.c-input--checkbox--decorated--checkmark > input{
+  @extend .o-display--none;
+}
+.c-input--checkbox--decorated--checkmark > input:checked {
+  & + .c-input--checkbox--decorated--checkmark__icon{
+    // TODO: Extract this
+    color: darken($green, 50);
+    // TODO: Extract this
+    background-color: lighten($green, 10);
+  }
+}
+
+.c-input--checkbox--with-icon{}
+.c-input--checkbox--with-icon > input{
+  @extend .o-display--none;
+}
+.c-input--checkbox__icon{
+  // TODO: Extract this
+  @extend .o-opacity--2-4;
+}
+.c-input--checkbox--with-icon > input:checked + .c-input--checkbox__icon{
+  @extend .o-opacity--full;
+}
+
+.c-input-type--text{}
+.c-input-type--text--quiet{
+  @extend .o-border-width--zero;
+  @extend .o-outline--none;
+}

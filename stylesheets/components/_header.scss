@@ -1,0 +1,38 @@
+$line-height: 55px;
+
+.c-header {
+  // TODO: Extract this
+  color: transparentize($light, 0.2);
+  @extend .o-position--relative;
+  @extend .o-overflow--visible;
+  // TODO: Extract this
+  padding: 2em 0;
+}
+
+.c-header__logo{
+  // TODO: Define proper font sizes
+  font-size: 3em;
+  // TODO: Extend core functionality to add more colors
+  color: $dark;
+  // TODO: Extract this
+  line-height: $line-height;
+  // TODO: Extract this
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: lighten($grey, 75);
+
+  @extend .o-padding-right--sm;
+  @extend .o-padding-left--sm;
+}
+
+.c-header__nav{
+  // TODO: Extract this
+  line-height: $line-height;
+}
+
+.c-header__actions{
+  @extend .o-position--absolute;
+  // TODO: Extract this
+  top: 10px;
+  right: 25%;
+}

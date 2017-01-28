@@ -1,0 +1,54 @@
+.c-contents{}
+.c-contents--is-empty{
+  @extend .o-text-align--center;
+}
+.c-contents--is-empty__title{
+  @extend .o-text-transform--uppercase;
+  // TODO: Extract this
+  font-size: 2em;
+  // TODO: Extract this
+  margin-bottom: 2em;
+}
+.c-contents--is-empty__options-list{
+  @extend .o-display--inline-block;
+  @extend .o-margin--auto;
+}
+.c-contents--is-empty__options-list__item{
+  @extend .o-float--left;
+}
+.c-contents--is-empty__options-list__item__icon{
+  // TODO: Extract this
+  font-size: 5em;
+}
+.c-contents--is-empty__options-list__item__icon:hover{
+  // TODO: Extract this
+  color: lighten(black, 50);
+}
+
+.c-contents--has-content{}
+.c-content-type-section{}
+.c-content-type-section__header{}
+.c-content-type-section__body{}
+.c-content-type-list{}
+.c-content-type-list__item{
+  // TODO: Extract this
+  width: 33%;
+  @extend .o-float--left;
+  @extend .o-box-sizing--border-box;
+}
+.c-content-type-list__item__inner{
+  @extend .o-padding--xs;
+}
+
+.contents-add-image__find-button{}
+.contents-add-image__find-button > input {
+  @extend .o-display--none;
+}
+
+.contents-view__sidebar{
+  // TODO: Extract this
+  width: 38%;
+}
+.contents-view__sidebar__thumb{
+  @extend .o-background-color--silver;
+}

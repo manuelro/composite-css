@@ -1,0 +1,9 @@
+// $grid-slug: o-col;
+// $grid-columns: 12;
+//
+// @for $i from 1 through $grid-columns{
+//   $grid-part: 100/$i;
+//   .#{$grid-slug}-#{$i}{
+//     @extend .o-width-$i;
+//   }
+// }

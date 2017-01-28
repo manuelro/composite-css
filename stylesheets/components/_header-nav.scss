@@ -1,0 +1,34 @@
+.c-header__nav__list{
+  @extend .o-padding-left--sm;
+  @extend .o-margin--zero;
+  // TODO: Extract this
+  font-size: 0.9em;
+}
+.c-header__nav__list__item{
+  @extend .o-display--inline-block;
+  @extend .o-float--left;
+  @extend .o-text-transform--uppercase;
+}
+
+.c-header__nav__list__item > a{
+  @extend .o-color--white;
+  @extend .o-text-decoration--none;
+  // TODO: Extract this
+  padding: 0.5em 0.8em;
+  // TODO: Extract this
+  margin: 0 1em;
+  // TODO: Extract this
+  height: 1.2em;
+
+  @extend .o-border-radius--xs;
+
+  // TODO: Extract this
+  color: lighten($grey, 40);
+}
+
+.c-header__nav__list__item > a:hover, .c-header__nav__list__item.active > a{
+  // TODO: Extract this
+  background-color: lighten($yellow, 5);
+  // TODO: Extract this
+  color: transparentize($dark, 0.1);
+}

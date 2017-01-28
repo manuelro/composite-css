@@ -1,0 +1,23 @@
+.c-card{
+  @extend .o-border-style--solid;
+  // TODO: Extract this
+  border-color: darken(white, 5);
+
+  @extend .o-border-width--xs;
+  @extend .o-overflow--hidden;
+}
+.c-card__header{}
+.c-card__header__image{
+  // TODO: Extract this
+  width: 38%;
+  @extend .o-background-color--silver;
+}
+.c-card__header__body{}
+.c-card__body{}
+
+.c-card__toolbar{
+  // TODO: Extract this
+  background-color: darken(white, 5);
+}
+
+.c-card__footer{}

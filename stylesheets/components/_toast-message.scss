@@ -1,0 +1,28 @@
+$toast-message-z-index: 400;
+.c-toast-message{
+  @extend .o-position--absolute;
+
+  // TODO: Extract this
+  padding: 1em 2em;
+  @extend .o-left--1-10;
+  @extend .o-right--1-10;
+  @extend .o-text-align--center;
+  // TODO: Extract this
+  z-index: $toast-message-z-index;
+
+  // TODO: Extract this
+  font-size: 0.8em;
+
+  @extend .o-border-radius--xs;
+
+  @extend .o-box-sizing--border-box;
+}
+.c-toast-message--warning{
+  // TODO: Extract this
+  background-color: lighten($yellow, 30);
+  // TODO: Extract this
+  color: darken($yellow, 30);
+}
+.c-toast-message--bottom{
+  @extend .o-bottom--sm;
+}

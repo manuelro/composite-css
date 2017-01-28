@@ -1,0 +1,10 @@
+.shape{
+  @extend .o-display--inline-block;
+}
+.shape--xl{
+  width: 60px;
+}
+.shape--xl.shape--circle{
+  line-height: 60px;
+  border-radius: 30px;
+}

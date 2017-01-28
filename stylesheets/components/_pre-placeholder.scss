@@ -1,0 +1,54 @@
+.c-pre-placeholder{
+  // TODO: Extract this
+  background-color: transparentize(lighten($blue, 45), 0.2);
+
+  @extend .o-position--absolute;
+
+  // TODO:  Extract this
+  z-index: 100;
+
+  @extend .o-box-sizing--border-box;
+
+  @extend .o-border-style--dashed;
+  @extend .o-border-width--xs;
+  // TODO:  Extract this
+  border-color: $blue;
+}
+
+.c-pre-placeholder__button:link{
+  // TODO:  Extract this
+  background-color: $blue;
+
+  @extend .o-color--white;
+  @extend .o-text-transform--uppercase;
+  @extend .o-white-space--nowrap;
+}
+
+.c-pre-placeholder__actions{
+  @extend .o-position--absolute;
+  @extend .o-text-align--center;
+}
+
+.c-pre-placeholder__action__icon{
+  // TODO: Extract this
+  font-size: 1.8em;
+}
+
+@media (max-width: 1030px) {
+  .c-pre-placeholder--size-4.c-pre-placeholder--colspan-1{
+    .c-pre-placeholder__action__icon{
+      font-size: 3em;
+    }
+    .e-pre-placeholder__action__text{
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .c-pre-placeholder--size-4.c-pre-placeholder--colspan-1{
+    .c-pre-placeholder__action__icon{
+      font-size: 2.5em;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.c-pills-list{}
+.c-pills-list__item{
+  @extend .o-float--left;
+  @extend .o-margin-right--xs;
+  @extend .o-margin-bottom--xs;
+}
+
+.c-pill{
+  // TODO: Extract this
+  line-height: 24px;
+  @extend .o-background-color--white;
+
+  @extend .o-display--block;
+  // TODO: Extract this
+  border-radius: 12px;
+  @extend .o-text-transform--uppercase;
+
+  // TODO: Extract this
+  border-color: darken(white, 10);
+
+  @extend .o-border-width--xs;
+  @extend .o-border-style--solid;
+}
+
+.c-pill:hover{
+  // TODO: Extract this
+  border-color: darken(white, 5);
+}
+
+.c-pill__text{
+  // TODO: Extract this
+  font-size: 0.8em;
+  @extend .o-padding-left--sm;
+  @extend .o-padding-right--sm;
+}
+.c-pill__action{
+  // TODO: Extract this
+  font-size: 0.5em;
+  @extend .o-padding-right--sm;
+}
+.c-pill__action--delete:link{
+  // TODO: Extract this
+  color: darken(white, 30);
+}
+.c-pill__action--delete:hover{
+  // TODO: Extract this
+  color: lighten($red, 10);
+}
+.c-pill__action--delete:active{
+  // TODO: Extract this
+  color: $red;
+}

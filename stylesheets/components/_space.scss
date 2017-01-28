@@ -1,0 +1,139 @@
+$c-space-border-color: lighten($dark, 85);
+.c-space{
+  // width: 50%;
+  // height: 50%;
+
+  @extend .o-float--left;
+  @extend .o-position--relative;
+  @extend .o-box-sizing--border-box;
+
+  @extend .o-border-style--solid;
+  @extend .o-border-width--xs;
+  @extend .o-border-color--light;
+
+  @extend .o-user-select--none;
+
+  @extend .o-cursor--pointer;
+
+  @extend .o-transition-property--border-color;
+  @extend .o-transition-property--background-color;
+  @extend .o-transition-duration--sm;
+
+  &::before{
+    @extend .o-content--empty;
+    @extend .o-position--absolute;
+    @extend .o-top--sm;
+    @extend .o-right--sm;
+    @extend .o-bottom--sm;
+    @extend .o-left--sm;
+
+    @extend .o-transition-property--border-color;
+    @extend .o-transition-duration--sm;
+
+    @extend .o-border-style--dashed;
+    @extend .o-border-color--transparent;
+    @extend .o-border-width--xs;
+
+    @extend .o-border-radius--xs;
+  }
+
+  &:hover{
+    // TODO: Extract this to color shades
+    background-color: lighten($blue, 45);
+    @extend .o-border-color--blue;
+
+    &::before{
+      @extend .o-border-color--blue;
+    }
+
+    > .c-space__hint{
+      @extend .o-display--block;
+    }
+  }
+}
+
+.c-space__index{
+  @extend .o-position--absolute;
+  @extend .o-top--1-2;
+  @extend .o-left--6-12;
+
+  @extend .o-color--black;
+
+  // TODO: Extract this
+  transform: translate(-50%, -50%);
+}
+
+.c-space__hint{
+  @extend .o-display--none;
+  @extend .o-position--absolute;
+
+  // @extend .o-transition-property--opacity;
+  // @extend .o-transition-duration--sm;
+
+  // TODO: Extract this
+  bottom: 30px;
+  @extend .o-left--6-12;
+
+  // TODO: Extract this
+  transform: translate(-50%, 0);
+
+  // TODO: Extract this
+  font-size: 0.7em;
+
+  @extend .o-text-align--center;
+}
+
+.c-space__hint__icon{
+  @extend .o-display--none;
+}
+
+@media (max-width: 1300px){
+  .c-space--size-4{
+    > .c-space__hint{
+      bottom: 50%;
+      transform: translate(-50%, 50%);
+    }
+
+    &:hover{
+      > .c-space__index{
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px){
+  .c-space--size-4{
+    > .c-space__index{
+      font-size: 0.8em;
+      padding: 0 10px;
+    }
+  }
+}
+
+@media (max-width: 930px){
+  .c-space--size-3{
+    > .c-space__hint{
+      bottom: 50%;
+      transform: translate(-50%, 50%);
+    }
+
+    &:hover{
+      > .c-space__index{
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 825px){
+  .c-space--size-4{
+    .c-space__index__text{
+      display: none;
+    }
+
+    > .c-space__hint{
+      font-size: 0.6em;
+    }
+  }
+}
