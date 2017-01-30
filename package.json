@@ -1,6 +1,6 @@
 {
   "name": "composite-css",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A flexible, composable, and reusable CSS framework built with Sass",
   "main": "./stylesheets/main.scss",
   "dependencies": {},
@@ -11,7 +11,9 @@
     "url": "git+https://github.com/manuelro/composite-css.git"
   },
   "keywords": [
-    "Sass", "CSS", "Components"
+    "Sass",
+    "CSS",
+    "Components"
   ],
   "author": "Manuel Ro",
   "license": "MIT",
